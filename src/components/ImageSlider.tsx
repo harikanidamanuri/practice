@@ -20,7 +20,7 @@ const ImageSlider = () => {
       <img
         src={images[currentImage].src}
         alt={images[currentImage].alt}
-        className="w-full h-[60vh] object-cover"
+        className="w-full object-cover"
       />
 
     
