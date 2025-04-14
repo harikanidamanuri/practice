@@ -10,6 +10,7 @@ import Return from './pages/Return';
 import Store from './pages/Store';
 import ApiCall from './pages/ApiCall';
 import PostForm from './pages/PostForm';
+import Usertable from './pages/Usertable';
 
 const App: React.FC = () => {
   return (
@@ -25,7 +26,8 @@ const App: React.FC = () => {
         <Route path='/stores'element={<Store />} />
         <Route path='/api_call'element={<ApiCall />}/>
         <Route path='/api_call/:postid' element={<ApiCall />}/>
-        <Route path='/api_call/post_call'element={<PostForm />}/>
+        <Route path='/api_call/post_call' element={<PostForm />} />
+        <Route path='/api_call/table' element={<Usertable />} />
       </Routes>
     </div> 
   );
