@@ -1,7 +1,12 @@
 import React from "react";
+import Header1 from "../components/Header1";
+import Nav from "../components/Nav";
 
 const Sale: React.FC = () => {
   return (
+    <>
+      <Header1 />
+      <Nav />
     <div className="relative w-full">
       {/* Fullwidth Responsive Image */}
       <img
@@ -19,7 +24,8 @@ const Sale: React.FC = () => {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+      </>
   );
 };
 

@@ -3,7 +3,7 @@ import React from "react";
 const ImageWithTextComponent: React.FC = () => {
   return (
     <section className="w-full h-[400px] md:h-[350px] flex flex-col items-center justify-center text-white text-center px-4 relative">
-      {/* Image */}
+      
       <img 
         src="/images/img9.jpg" 
         alt="Banner" 

@@ -1,5 +1,5 @@
 import React from "react";
-import FooterBottom from "./footerbottom";
+import FooterBottom from "./FooterBottom";
 const footerData = [
   {
     title: "HELP",
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
     <footer className="bg-black text-white p-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {footerData.map((section, index) => (
-          <div key={index} className="text-left"> {/* Ensure all text is aligned left */}
+          <div key={index} className="text-left">
             <h3 className="font-bold text-lg mb-4 text-left">{section.title}</h3>
             <ul className="space-y-2">
               {section.links.map((link, linkIndex) => (

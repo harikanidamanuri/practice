@@ -5,7 +5,7 @@ const Header1 = () => {
     "Free Shipping On Orders Over $75. Easy Returns."
   );
 
-  // Function to change the banner content
+  
   const changeBannerContent = () => {
     const newContent =
       bannerContent === "Free Shipping On Orders Over $75. Easy Returns."
@@ -14,13 +14,13 @@ const Header1 = () => {
     setBannerContent(newContent);
   };
 
-  // Automatically change the content every 2 seconds
+ 
   useEffect(() => {
     const intervalId = setInterval(() => {
       changeBannerContent();
     }, 2000); // Change content every 2 seconds
 
-    return () => clearInterval(intervalId); // Clean up the interval on component unmount
+    return () => clearInterval(intervalId); 
   }, [bannerContent]);
 
   return (

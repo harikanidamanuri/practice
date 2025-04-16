@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ImageRowComponent = () => {
-  const images : any = [
+  const images = [
     {
       src: '/images/img3.jpg',
       alt: 'Shop Men',
@@ -30,28 +30,34 @@ const ImageRowComponent = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-8">
-      {images.map((image: any, index: number) => (
-        <div key={index} className="relative group">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 py-8">
+      {images.map((image, index) => (
+        <div key={index} className="relative group overflow-hidden rounded-lg shadow-md">
           <img
-            className="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105 group-hover:bg-white"
+            className="w-full h-auto object-cover transition-transform duration-300 transform md:group-hover:scale-105"
             src={image.src}
             alt={image.alt}
           />
-          <div className="absolute top-0 left-0 w-full text-white text-center p-4">
-            <h2 className="text-white text-2xl font-bold shadow-lg">{image.title}</h2>
-            <p className="text-white text-lg shadow-lg">{image.description}</p>
+          {/* Text overlay */}
+          <div className="absolute top-0 left-0 w-full text-white text-center p-4 bg-gradient-to-b from-black/60 to-transparent">
+            <h2 className="text-white text-2xl font-bold drop-shadow">{image.title}</h2>
+            <p className="text-white text-lg drop-shadow">{image.description}</p>
             {image.description2 && (
-              <p className="text-white text-lg shadow-lg pl-10">{image.description2}</p>
+              <p className="text-white text-lg drop-shadow">{image.description2}</p>
             )}
           </div>
-          <div className="absolute bottom-4 left-0 w-full flex justify-center space-x-4 opacity-0 invisible transition-opacity duration-300 group-hover:opacity-100 group-hover:visible">
-            <div className="px-6 py-2 border border-black text-black bg-white uppercase text-sm font-semibold transition-all duration-300 hover:bg-black hover:text-white">
-              <p>{image.button1}</p>
-            </div>
-            <div className="px-6 py-2 border border-black text-black bg-white uppercase text-sm font-semibold transition-all duration-300 hover:bg-black hover:text-white">
-              <p>{image.button2}</p>
-            </div>
+          {/* Buttons - responsive */}
+          <div className="absolute bottom-4 left-0 w-full flex flex-col items-center space-y-2 
+            md:flex-row md:justify-center md:space-y-0 md:space-x-4 
+            opacity-100 visible 
+            md:opacity-0 md:invisible md:group-hover:opacity-100 md:group-hover:visible 
+            transition-opacity duration-300">
+            <button className="px-6 py-2 border border-black text-black bg-white uppercase text-sm font-semibold transition-all duration-300 hover:bg-black hover:text-white">
+              {image.button1}
+            </button>
+            <button className="px-6 py-2 border border-black text-black bg-white uppercase text-sm font-semibold transition-all duration-300 hover:bg-black hover:text-white">
+              {image.button2}
+            </button>
           </div>
         </div>
       ))}
