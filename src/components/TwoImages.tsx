@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './reusable/button';
 
 const TwoImages = () => {
   return (
@@ -44,9 +45,10 @@ const TwoImages = () => {
               md:group-hover:opacity-100 md:group-hover:visible
               transition-opacity duration-300"
           >
-            <button className="px-5 py-2 bg-white text-black font-semibold border border-white hover:bg-black hover:text-white transition-colors duration-300">
+            {/* <button className="px-5 py-2 bg-white text-black font-semibold border border-white hover:bg-black hover:text-white transition-colors duration-300">
               {item.buttonLabel}
-            </button>
+            </button> */}
+            <Button />
           </div>
         </div>
       ))}

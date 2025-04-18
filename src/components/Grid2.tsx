@@ -1,18 +1,16 @@
 import React, { useRef } from "react";
 
 const products = [
-  { id: 1, image: "/images/img7.jpg", name: "Women's Canvas Pipers", description: "Natural White / Hanami Night", price: "$90" },
-  { id: 2, image: "/images/img4.jpg", name: "Men's Canvas Pipers", description: "Natural Black", price: "$90" },
-  { id: 3, image: "/images/img3.jpg", name: "Women's Lounger Lift", description: "Weathered Grey", price: "$105" },
-  { id: 4, image: "/images/img4.jpg", name: "Men's Tree Runner Go", description: "Hanami Night", price: "$120" },
-  { id: 5, image: "/images/img5.jpg", name: "Women's Breeze Runners", description: "Blue Shade", price: "$98" },
-  { id: 6, image: "/images/img6.jpg", name: "Men's Casual Sneakers", description: "Storm Grey", price: "$115" },
-  { id: 7, image: "/images/img7.jpg", name: "Women's Slip-Ons", description: "Cloud White", price: "$80" },
-  { id: 8, image: "/images/img8.jpg", name: "Men's Sports Runners", description: "Jet Black", price: "$110" },
-  { id: 9, image: "/images/img7.jpg", name: "Women's Canvas Pipers", description: "Women's Tree Runners", price: "$98" },
-  { id: 10, image: "/images/img8.jpg", name: "Men's Canvas Pipers", description: "Men's Tree Longeres", price: "$98" },
-  { id: 11, image: "/images/img3.jpg", name: "Women's Lounger Lift", description: "Men's Tree Breezers", price: "$100" },
-  { id: 12, image: "/images/img4.jpg", name: "Men's Tree Runner Go", description: "Women's Tree Runners", price: "$98" },
+  { id: 1, image: "/images/6img.avif", name: "Women's Canvas Pipers", description: "Natural White / Hanami Night", price: "$90" },
+  { id: 2, image: "/images/2f.avif", name: "Men's Canvas Pipers", description: "Natural Black", price: "$90" },
+  { id: 3, image: "/images/3f.avif", name: "Women's Lounger Lift", description: "Weathered Grey", price: "$105" },
+  { id: 4, image: "/images/4f.avif", name: "Men's Tree Runner Go", description: "Hanami Night", price: "$120" },
+  { id: 5, image: "/images/5img.avif", name: "Women's Breeze Runners", description: "Blue Shade", price: "$98" },
+  { id: 6, image: "/images/6img.avif", name: "Men's Casual Sneakers", description: "Storm Grey", price: "$115" },
+  { id: 7, image: "/images/7img.avif", name: "Women's Slip-Ons", description: "Cloud White", price: "$80" },
+  { id: 8, image: "/images/2img.avif", name: "Men's Sports Runners", description: "Jet Black", price: "$110" },
+  { id: 9, image: "/images/9img.avif", name: "Women's Canvas Pipers", description: "Women's Tree Runners", price: "$98" },
+  { id: 10, image: "/images/10img.avif", name: "Men's Canvas Pipers", description: "Men's Tree Longeres", price: "$98" }
 ];
 
 const Grid2 = () => {
@@ -31,7 +29,6 @@ const Grid2 = () => {
       <h3 className="text-xl font-bold text-start pl-4 sm:pl-8 mb-6">MORE TO SHOP</h3>
 
       <div className="relative">
-        {/* Previous Button */}
         <button
           onClick={() => scroll("left")}
           className="hidden sm:flex absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 text-2xl sm:text-3xl text-gray-600 hover:text-black transition px-4 py-2 border border-gray-300 rounded-full z-10 bg-white"
@@ -39,7 +36,6 @@ const Grid2 = () => {
           &lt;
         </button>
 
-        {/* Product Grid Scrollable */}
         <div className="overflow-hidden">
           <div
             ref={scrollRef}
@@ -63,7 +59,6 @@ const Grid2 = () => {
           </div>
         </div>
 
-        {/* Next Button */}
         <button
           onClick={() => scroll("right")}
           className="hidden sm:flex absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 text-2xl sm:text-3xl text-gray-600 hover:text-black transition px-4 py-2 border border-gray-300 rounded-full z-10 bg-white"

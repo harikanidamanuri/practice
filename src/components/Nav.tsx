@@ -16,8 +16,8 @@ const Nav = () => {
   ];
 
   const iconButtons = [
-    { icon: <User size={24} />, label: "User" },
     { icon: <Search size={24} />, label: "Search" },
+    { icon: <User size={24} />, label: "User" },
     { icon: <HelpCircle size={24} />, label: "Help" },
     { icon: <ShoppingCart size={24} />, label: "Cart" },
   ];
@@ -57,35 +57,52 @@ const Nav = () => {
           {/* Desktop nav links (left) */}
           <div className="hidden lg:flex items-center space-x-6 font-semibold text-gray-800">
             {navLinks.slice(0, 4).map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={`/${link.href}`}
                 className={`hover:underline ${link.special ? "text-red-500" : ""}`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Desktop nav links + icons (right) */}
           <div className="hidden lg:flex items-center space-x-6 text-gray-800 font-semibold ml-auto">
             {navLinks.slice(4).map((link) => (
-              <a key={link.label} href={link.href} className="hover:underline">
+              <Link
+                key={link.label}
+                to={`/${link.href}`}
+                className="hover:underline"
+              >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="flex space-x-4">
-              {iconButtons.map((button) => (
-                <button
-                  key={button.label}
-                  className="text-gray-700 hover:text-black group relative"
-                >
-                  {button.icon}
-                  <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-1 px-2 rounded-md whitespace-nowrap">
-                    {button.label}
-                  </span>
-                </button>
-              ))}
+              {iconButtons.map((button) =>
+                button.label === "User" ? (
+                  <Link
+                    to="/login"
+                    key={button.label}
+                    className="text-gray-700 hover:text-black group relative"
+                  >
+                    {button.icon}
+                    <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-1 px-2 rounded-md whitespace-nowrap">
+                      {button.label}
+                    </span>
+                  </Link>
+                ) : (
+                  <button
+                    key={button.label}
+                    className="text-gray-700 hover:text-black group relative"
+                  >
+                    {button.icon}
+                    <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute top-10 left-1/2 transform -translate-x-1/2 bg-black text-white py-1 px-2 rounded-md whitespace-nowrap">
+                      {button.label}
+                    </span>
+                  </button>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -96,24 +113,36 @@ const Nav = () => {
             <ul className="flex flex-col space-y-4 font-semibold text-gray-800 text-center">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={`/${link.href}`}
                     className={`hover:underline ${link.special ? "text-red-500" : ""}`}
+                    onClick={() => setIsMobileMenuOpen(false)} // Close menu on click
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
             <div className="flex justify-center space-x-6 pt-4">
-              {iconButtons.map((button) => (
-                <button
-                  key={button.label}
-                  className="text-gray-500 hover:text-black"
-                >
-                  {button.icon}
-                </button>
-              ))}
+              {iconButtons.map((button) =>
+                button.label === "User" ? (
+                  <Link
+                    to="/login"
+                    key={button.label}
+                    className="text-gray-500 hover:text-black"
+                    onClick={() => setIsMobileMenuOpen(false)} // Optional: close menu
+                  >
+                    {button.icon}
+                  </Link>
+                ) : (
+                  <button
+                    key={button.label}
+                    className="text-gray-500 hover:text-black"
+                  >
+                    {button.icon}
+                  </button>
+                )
+              )}
             </div>
           </div>
         )}

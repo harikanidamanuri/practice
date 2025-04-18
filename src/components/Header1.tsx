@@ -18,8 +18,7 @@ const Header1 = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       changeBannerContent();
-    }, 2000); // Change content every 2 seconds
-
+    }, 2000); 
     return () => clearInterval(intervalId); 
   }, [bannerContent]);
 
@@ -31,7 +30,7 @@ const Header1 = () => {
           <span className="block">{bannerContent}</span>
         </div>
 
-        {/* Button to manually change banner content */}
+      
         <button
           onClick={changeBannerContent}
           className="text-white hover:text-gray-300 ml-2 sm:ml-4 md:ml-6 text-xl md:text-2xl"

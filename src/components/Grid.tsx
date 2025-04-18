@@ -1,23 +1,25 @@
+
 import React from "react";
+import Button from "./reusable/button";
 
 const products = [
   {
     title: "Tree Runner Go",
     description: "Hanami Night",
     price: "$120",
-    image: "images/img4.jpg",
+    image: "images/4img.avif",
   },
   {
     title: "Tree Runner Go",
     description: "Blizzard/Hanami Night",
     price: "$120",
-    image: "images/img6.jpg",
+    image: "images/10img.avif",
   },
   {
     title: "Tree Gliders",
     description: "Blizzard/Hanami Blue",
     price: "$135",
-    image: "images/img8.jpg",
+    image: "images/6img.avif",
   },
   {
     title: "Tree Dasher 2",
@@ -74,7 +76,7 @@ export default function ProductLayout() {
               </div>
 
               {/* Responsive Buttons: always visible on mobile, hover on md+ */}
-              <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 bg-black/40
+              {/* <div className="absolute inset-0 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 bg-black/40
                 opacity-100 visible 
                 md:opacity-0 md:invisible 
                 md:group-hover:opacity-100 md:group-hover:visible 
@@ -87,7 +89,8 @@ export default function ProductLayout() {
                     {btn}
                   </button>
                 ))}
-              </div>
+              </div> */}
+              <Button />
             </div>
           ))}
         </div>

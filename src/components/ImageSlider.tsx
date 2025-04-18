@@ -42,16 +42,6 @@ const ImageSlider = () => {
           ></span>
         ))}
       </div>
-
-      {/* Bottom right buttons */}
-      <div className="absolute bottom-4 right-4 z-10 flex flex-col sm:flex-row gap-2">
-        <button className="bg-white text-black font-medium text-sm sm:text-base lg:text-lg py-2 px-4 transition-colors duration-300 hover:bg-black hover:text-white shadow-md mb-10">
-          Shop Men
-        </button>
-        <button className="bg-white text-black font-medium text-sm sm:text-base lg:text-lg py-2 px-4 transition-colors duration-300 hover:bg-black hover:text-white shadow-md mb-10">
-          Shop Women
-        </button>
-      </div>
     </div>
   );
 };

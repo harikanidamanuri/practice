@@ -47,11 +47,11 @@ const Men = () => {
 
   const featuredItems = [
     {
-      image: "images/img4.jpg",
+      image: "images/img7.jpg",
       text: "NEW CANVAS PIPER",
     },
     {
-      image: "/images/img6.jpg",
+      image: "/images/img9.jpg",
       text: "BESTSELLER",
     },
   ];

@@ -15,10 +15,10 @@ const footerData = [
   {
     title: "SHOP",
     links: [
-      "Men’s Shoes",
-      "Women’s Shoes",
-      "Men’s Apparel",
-      "Women’s Apparel",
+      "Men's Shoes",
+      "Women's Shoes",
+      "Men's Apparel",
+      "Women's Apparel",
       "Socks",
       "Gift Cards",
       "Refer a Friend",

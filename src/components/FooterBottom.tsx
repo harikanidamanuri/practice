@@ -49,7 +49,6 @@ const FooterBottom: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer Bottom Links */}
       <div className="w-full mx-auto px-6 mt-6 text-gray-400 text-sm text-center space-y-2">
         <p>
           © 2024 Allbirds. All Rights Reserved.
