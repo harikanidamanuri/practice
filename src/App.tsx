@@ -16,7 +16,6 @@ import Shopwomen from './components/reusable/shopwomen';
 import Login from './pages/login';
 import ProductPage from './components/reusable/productdetails';
 import LoadingScreen from './components/loadingscreen';
-
 const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -50,8 +49,7 @@ const App: React.FC = () => {
           <Route path='/shopwomen' element={<Shopwomen />} />
           <Route path='/login' element={<Login />} />
           <Route path='/productdetail/men/:id' element={<ProductPage />} />
-          <Route path="/productdetail/women/:id" element={<ProductPage />} />
-           
+          <Route path="/productdetail/women/:id" element={<ProductPage />} />   
         </Routes>
       )}
     </div>
